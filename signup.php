@@ -26,7 +26,15 @@
                 
                 $insert = "INSERT INTO Students VALUES ($schoolId, '$firstName', '$middleName', '$lastName', '$hashPassword');";
                 mysqli_query($conn, $insert);
-                header("Location: student_homepage.html");
+
+                $_SESSION['user']=[
+                    'firstName' => $firstName,
+                    'middleName'=> $middleName,
+                    'lastName'=> $lastName,
+                    'schoolId'=> $schoolId
+                ];
+                
+                header("Location: student_homepage.php");
 
             } else {
                 die("SchoolID is already taken");

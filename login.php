@@ -17,7 +17,13 @@
             
             if($stmt->fetch()){
                 if (password_verify($password, $storedPassword)){
-                    header("Location: student_homepage.html");
+                    $_SESSION["user"]=
+                    [   
+                        'schoolId'=>$user['$schoolId'],
+                        'firstName'=>$user['firstName']
+                    ];
+                    header("Location: student_homepage.php");
+                    exit();
                 } else {
                     die("wrong pass");
                 }

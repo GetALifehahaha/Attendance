@@ -1,3 +1,14 @@
+<?php
+    include("config.php");
+    include("dbconnect.php");
+
+    if (isset($_SESSION["user"])) {
+        $user = $_SESSION["user"];
+    } else {
+        header('LOCATION: login.php');
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,15 +24,18 @@
 <body>
     <div class="container">
         <h2>Student Attendance</h2>
+        
         <div class="qr_section">
             <div class="qr_code_details">
                 <img id="qr_code" src="">
+                <h3 id="schoolId">202300049</h3>
             </div>
-            <h3 id="schoolId">202300049</h3>
         </div>
         <div class="studentInformation">
             <h3 id="studentName">Ahlan-nour J. Sencio</h3>
         </div>
     </div>
+
+    
 </body>
 </html>
