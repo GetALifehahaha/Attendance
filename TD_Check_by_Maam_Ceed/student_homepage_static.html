@@ -1,0 +1,158 @@
+<?php
+    include("config.php");
+    include("dbconnect.php");
+
+    if (isset($_SESSION["user"])) {
+        $user = $_SESSION["user"];
+    } else {
+        header('LOCATION: login.php');
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Homepage</title>
+    <link rel="stylesheet" href="student_homepage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <nav id="navbar">
+        <h3>Attendance System</h3>
+        <a href="">LOG OUT</a>
+    </nav>
+    <main>
+        <div class="container">
+            <h2>Student Attendance</h2>
+            
+            <div class="qr_section">
+                <div class="qr_code_details">
+                    <img id="qr_code" src="">
+                    <h3 id="schoolId">202300049</h3>
+                </div>
+            </div>
+            <div class="studentInformation">
+                <h3 id="studentName">Ahlan-nour J. Sencio</h3>
+                <h4 id="course_year_section">BSIT 2A</h4>
+                <h5 id="college">College of Computing Studies</h4>
+            </div>
+        </div>
+
+        <div class="container">
+            <h3>Schedule: Today</h3>
+            <div class="schedule_today">
+                <table>
+                    <tr>
+                        <th>Time</th>
+                        <th>Subject Name</th>
+                        <th>Room</th>
+                    </tr>
+                    <tr>
+                        <td>11:00 am - 12:30 pm</td>
+                        <td>IT Elective 2 - Lab</td>
+                        <td>Lab 2</td>
+                    </tr>
+                    <tr>
+                        <td>2:00 pm - 4:00 pm</td>
+                        <td>Advanced Database Systems</td>
+                        <td>LR 1</td>
+                    </tr>
+                    <tr>
+                        <td>4:00 pm - 7:00 pm</td>
+                        <td>Advanced Database Systems - Lab</td>
+                        <td>Lab 2</td>
+                    </tr>
+                </table>    
+            </div>
+
+            <h3>Schedule: Week</h3>
+            <div class="schedule_week">
+                <table>
+                    <tr>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                        <th>Sunday</th>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h4>EPIC START 2-A</h4>
+                            8:30 AM – 10:00 AM
+                            <br /><br />
+                            <h4>Mobile Computing Lab</h4>
+                            3:00 PM – 5:00 PM
+                        </td>
+
+                        <td>
+                            <h4>IT Elective 2</h4>
+                            10:00 AM – 12:30 PM
+                            <br /><br />
+                            <h4>Ethics</h4>
+                            3:00 PM – 4:00 PM
+                            <br /><br />
+                            <h4>The Contemporary World</h4>
+                            4:00 PM – 5:30 PM
+                        </td>
+
+                        <td>
+                            <h4>IT Elective 2 Lab</h4>
+                            10:00 AM – 12:30 PM
+                            <br /><br />
+                            <h4>Advanced Database Systems</h4>
+                            1:00 PM – 3:00 PM
+                            <br /><br />
+                            <h4>Advanced Database Systems Lab</h4>
+                            3:00 PM – 5:00 PM
+                        </td>
+
+                        <td>
+                            <h4>EPIC START 2-A</h4>
+                            8:30 AM – 10:00 AM
+                            <br /><br />
+                            <h4>IT Elective 2 Lab</h4>
+                            10:00 AM – 12:30 PM
+                            <br /><br />
+                            <h4>Networking 1 Lab</h4>
+                            1:00 PM – 3:00 PM
+                            <br /><br />
+                            <h4>Mobile Computing</h4>
+                            3:00 PM – 5:00 PM
+                        </td>
+
+                        <td>
+                            <h4>Networking</h4>
+                            10:00 AM – 12:30 PM
+                            <br /><br />
+                            <h4>Outdoor and Adventure Activities</h4>
+                            1:00 PM – 3:00 PM
+                            <br /><br />
+                            <h4>Ethics</h4>
+                            3:00 PM – 5:00 PM
+                            <br /><br />
+                            <h4>The Contemporary World</h4>
+                            5:00 PM – 7:00 PM
+                        </td>
+
+                        <td>
+                            <h4>Integrative Programming and Technologies Lab</h4>
+                            8:30 AM – 10:00 AM
+                            <br /><br />
+                            <h4>Integrative Programming and Technologies</h4>
+                            3:00 PM – 5:00 PM
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
