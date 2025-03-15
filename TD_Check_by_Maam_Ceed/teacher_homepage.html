@@ -1,72 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance System</title>
     <link rel="stylesheet" href="teacher_homepage.css">
+    <script defer src="script.js"></script>
 </head>
+
 <body>
     <nav id="navbar">
         <h3>Attendance System</h3>
-        
-        <div class="user-info">
+        <div>
             <span class="professor-name">Professor</span>
-            <a href="">SIGN OUT</a>
+            <a href="#" id="signOut">SIGN OUT</a>
         </div>
     </nav>
 
     <div class="main">
-            <aside class="sidebar">
-                <h3>Subjects</h3>
-                <ul class="options">
-                    <li>IT - Elective</li>
-                    <ul class="sub-options">
-                        <li>
-                            <span>Section A</span>
-                        </li>
-                        <li><span>Section B</span></li>
-                        <li><span>Section C</span></li>
+        <aside class="sidebar">
+            <h3>Subjects</h3>
+            <ul class="options">
+                <li>
+                    <button class="subject-button" onclick="toggleSections('it')">IT - Elective</button>
+                    <ul class="sub-options" id="it-sections" style="display: none;">
+                        <li><button onclick="showSection('it_a')">Section A</button></li>
+                        <li><button onclick="showSection('it_b')">Section B</button></li>
+                        <li><button onclick="showSection('it_c')">Section C</button></li>
                     </ul>
-                </ul>
-            </aside>
-    
-            <main>
-                <h2>BSIT - 2A - IT ELECTIVE</h2>
-                <table>
-                        <tr>
-                            <th>School ID</th>
-                            <th>Name</th>
-                            <th>Attendance Status</th>
-                        </tr>
-                        <tr>
-                            <td>202300001</td>
-                            <td>John Doe</td>
-                            <td>Present</td>
-                        </tr>
-                        <tr>
-                            <td>202300002</td>
-                            <td>Jane Smith</td>
-                            <td>Present</td>
-                        </tr>
-                        <tr>
-                            <td>202300003</td>
-                            <td>Michael Johnson</td>
-                            <td>Present</td>
-                        </tr>
-                        <tr>
-                            <td>202300004</td>
-                            <td>Emily Brown</td>
-                            <td>Present</td>
-                        </tr>
-                        <tr>
-                            <td>202300005</td>
-                            <td>Daniel White</td>
-                            <td>Absent</td>
-                        </tr>
-                </table>
-            </main>
-    </div>
-</body>
-</html>
+                </li>
+                <li>
+                    <button class="subject-button" onclick="toggleSections('db')">Advanced Database</button>
+                    <ul class="sub-options" id="db-sections" style="display: none;">
+                        <li><button onclick="showSection('db_a')">Section A</button></li>
+                        <li><button onclick="showSection('db_b')">Section B</button></li>
+                        <li><button onclick="showSection('db_c')">Section C</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
 
+        <main>
+            <div id="attendance-container">
+                <h2>Select a section</h2>
+            </div>
+        </main>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
