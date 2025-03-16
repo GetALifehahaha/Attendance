@@ -73,9 +73,7 @@ body {
             cursor: pointer;
             list-style: none;
             font-weight: 500;
-
-            li{
-            }
+            
             li:hover{
                 background-color: #d1d1d1;
             }
