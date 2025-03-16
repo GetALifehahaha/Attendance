@@ -1,11 +1,3 @@
-:root{
-    --clr-main: #eeeef0;
-    --clr-background: #d7dcdd;
-    --clr-white: #fdfeff;
-    --clr-outline: #dedede;
-    --clr-accent: #2e8bc0;
-    --clr-text: #0c2d48;
-}
 *{
     margin: 0; border: 0; padding: 0;
     box-sizing: border-box;
