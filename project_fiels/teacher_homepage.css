@@ -1,3 +1,11 @@
+:root{
+    --clr-main: #eeeef0;
+    --clr-background: #d7dcdd;
+    --clr-white: #fdfeff;
+    --clr-outline: #dedede;
+    --clr-accent: #2e8bc0;
+    --clr-text: #0c2d48;
+}
 *{
     margin: 0; border: 0; padding: 0;
     box-sizing: border-box;
@@ -13,15 +21,16 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 40px;
+    background-color: var(--clr-text);
     
     *:not(div){  
         font-size: 1rem;
         font-weight: 500;
         margin: 0 2rem;
+        color: var(--clr-background);
     }
     a{
         text-decoration: none;
-        color: black;
     }
     button{
         cursor: pointer;
@@ -41,7 +50,7 @@ body {
 }
 .main{
     min-height: calc(100vh - 60px);
-    background-color: #d1d1d1;
+    background-color: var(--clr-background);
 
     display: grid;
     grid-template-columns: auto 1fr;
