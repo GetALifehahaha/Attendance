@@ -1,9 +1,14 @@
 //teacher side
 
-const table_expander = document.getElementById("table_expander");
-const student_table = document.querySelector(".student_table");
 
-table_expander.addEventListener("click", function(event){
-    console.log('clicked');
-    student_table.classList.toggle("open");
+const open_schedule_form =  document.getElementById("add_schedule");
+const schedule_form = document.querySelector(".full_screen_container");
+const close_schedule_form = document.querySelector("#close_schedule_form");
+
+open_schedule_form.addEventListener("click", function(event){
+    schedule_form.classList.toggle("show");
+})
+
+close_schedule_form.addEventListener("click", function(){
+    schedule_form.classList.toggle("show");
 })

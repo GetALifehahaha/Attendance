@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance System</title>
     <link rel="stylesheet" href="teacher_homepage.css">
-    <script defer src="script.js"></script>
+    <script defer src="teacher_homepage.js"></script>
 </head>
 
 <body>
@@ -21,14 +21,14 @@
     <div class="main">
         <aside class="sidebar">
             <ul class="options">
-                <li>
+                <!-- <li>
                     Dashboard
-                </li>
+                </li> -->
                 <li>
                     Schedules
                 </li>
                 <li>
-                    <button class="subject-button" onclick="toggleSections('it')">IT - Elective</button>
+                    <!-- <button class="subject-button" onclick="toggleSections('it')">IT - Elective</button>
                     <ul class="sub-options" id="it-sections" style="display: none;">
                         <li><button onclick="showSection('it_a')">Section A</button></li>
                         <li><button onclick="showSection('it_b')">Section B</button></li>
@@ -41,14 +41,110 @@
                         <li><button onclick="showSection('db_a')">Section A</button></li>
                         <li><button onclick="showSection('db_b')">Section B</button></li>
                         <li><button onclick="showSection('db_c')">Section C</button></li>
-                    </ul>
+                    </ul> -->
                 </li>
             </ul>
         </aside>
 
         <main>
-            <div id="attendance-container">
-                <h2>Select a section</h2>
+            <div class="breadcrumbs">
+                <h2>Schedule</h2>
+            </div>
+            <button id="add_schedule">Add Schedule</button>
+
+            <div class="full_screen_container">
+                <div class="add_schedule">
+                    <div class="header">
+                        <h3>Add Schedule</h3>
+                        <span id="close_schedule_form">
+                            <h3>EXIT</h3>
+                            <h3>X</h3>
+                        </span>
+                    </div>
+                    <form action="">
+                        <label for="schedule_name">Schedule Name</label>
+                        <input type="text" id="schedule_name" name="schedule_name" placeholder="ex: IT Elective LAB">
+                        
+                        <label for="schedule_day">Schedule Day</label>
+                        <input type="text" id="schedule_day" name="schedule_day" placeholder="ex: M, TH">
+                        
+                        <label for="schedule_start">Schedule Start</label>
+                        <input type="text" id="schedule_start" name="schedule_start" placeholder="ex: 10:00">
+                        
+                        <label for="schedule_end">Schedule End</label>
+                        <input type="text" id="schedule_end" name="schedule_end" placeholder="ex: 13:00">
+                        
+                        <button>Add Schedule</button>
+                    </form>
+                </div>
+            </div>
+                
+                <div class="schedules_grid">
+                    <div onclick="window.location.href='teacher_homepage_schedule.html'" class="schedule_container">
+                    <h4>IT Elective Lab</h4>
+                    <div class="details">
+                        <p>BSIT 2A</p>
+                        <p>11:00 am - 12:30 pm</p>
+                        <p>LAB 2</p>
+                    </div>
+                </div>
+
+                <div class="schedule_container">
+                    <h4>IT Elective</h4>
+                    <div class="details">
+                        <p>BSIT 2A</p>
+                        <p>11:00 am - 12:30 pm</p>
+                        <p>LAB 2</p>
+                    </div>
+                </div>
+                <div class="schedule_container">
+                    <h4>IT Elective</h4>
+                    <div class="details">
+                        <p>BSIT 2A</p>
+                        <p>11:00 am - 12:30 pm</p>
+                        <p>LAB 2</p>
+                    </div>
+                </div>
+                <div class="schedule_container">
+                    <h4>IT Elective</h4>
+                    <div class="details">
+                        <p>BSIT 2A</p>
+                        <p>11:00 am - 12:30 pm</p>
+                        <p>LAB 2</p>
+                    </div>
+                </div>
+                <div class="schedule_container">
+                    <h4>IT Elective</h4>
+                    <div class="details">
+                        <p>BSIT 2A</p>
+                        <p>11:00 am - 12:30 pm</p>
+                        <p>LAB 2</p>
+                    </div>
+                </div>
+                <div class="schedule_container">
+                    <h4>IT Elective</h4>
+                    <div class="details">
+                        <p>BSIT 2A</p>
+                        <p>11:00 am - 12:30 pm</p>
+                        <p>LAB 2</p>
+                    </div>
+                </div>
+                <div class="schedule_container">
+                    <h4>IT Elective</h4>
+                    <div class="details">
+                        <p>BSIT 2A</p>
+                        <p>11:00 am - 12:30 pm</p>
+                        <p>LAB 2</p>
+                    </div>
+                </div>
+                    <div class="schedule_container">
+                        <h4>IT Elective</h4>
+                        <div class="details">
+                            <p>BSIT 2A</p>
+                            <p>11:00 am - 12:30 pm</p>
+                            <p>LAB 2</p>
+                        </div>
+                    </div>
             </div>
         </main>
     </div>
