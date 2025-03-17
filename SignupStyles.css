@@ -13,6 +13,17 @@ body {
     background-color: #d3d6dd;
 }
 
+h2 {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.welcome {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
 .container {
     display: flex;
     width: 900px;
@@ -58,7 +69,6 @@ body {
 .signup-box p {
     font-size: 14px;
     color: #666;
-    margin-bottom: 15px;
 }
 
 input {
