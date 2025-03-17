@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance System</title>
-    <link rel="stylesheet" href="teacher_homepage.css">
-    <script defer src="teacher_homepage.js"></script>
+    <link rel="stylesheet" href="teacher_page.css">
+    <script defer src="teacher_schedule.js"></script>
 </head>
 
 <body>
@@ -21,27 +21,14 @@
     <div class="main">
         <aside class="sidebar">
             <ul class="options">
-                <!-- <li>
+                <li>
                     Dashboard
-                </li> -->
+                </li>
                 <li>
                     Schedules
                 </li>
                 <li>
-                    <!-- <button class="subject-button" onclick="toggleSections('it')">IT - Elective</button>
-                    <ul class="sub-options" id="it-sections" style="display: none;">
-                        <li><button onclick="showSection('it_a')">Section A</button></li>
-                        <li><button onclick="showSection('it_b')">Section B</button></li>
-                        <li><button onclick="showSection('it_c')">Section C</button></li>
-                    </ul>
-                </li>
-                <li>
-                    <button class="subject-button" onclick="toggleSections('db')">Advanced Database</button>
-                    <ul class="sub-options" id="db-sections" style="display: none;">
-                        <li><button onclick="showSection('db_a')">Section A</button></li>
-                        <li><button onclick="showSection('db_b')">Section B</button></li>
-                        <li><button onclick="showSection('db_c')">Section C</button></li>
-                    </ul> -->
+                    Account
                 </li>
             </ul>
         </aside>
@@ -56,7 +43,7 @@
                 <div class="add_schedule">
                     <div class="header">
                         <h3>Add Schedule</h3>
-                        <span id="close_schedule_form">
+                        <span id="close_form">
                             <h3>EXIT</h3>
                             <h3>X</h3>
                         </span>
@@ -68,11 +55,16 @@
                         <label for="schedule_day">Schedule Day</label>
                         <input type="text" id="schedule_day" name="schedule_day" placeholder="ex: M, TH">
                         
-                        <label for="schedule_start">Schedule Start</label>
-                        <input type="text" id="schedule_start" name="schedule_start" placeholder="ex: 10:00">
-                        
-                        <label for="schedule_end">Schedule End</label>
-                        <input type="text" id="schedule_end" name="schedule_end" placeholder="ex: 13:00">
+                        <div class="grid">
+                            <label for="schedule_start">Schedule Start</label>
+                            <label for="schedule_end">Schedule End</label>
+                            
+                            <input type="text" id="schedule_start" name="schedule_start" placeholder="ex: 10:00">
+                            <input type="text" id="schedule_end" name="schedule_end" placeholder="ex: 13:00">
+                        </div>
+
+                        <label for="schedule_section">Section</label>
+                        <input type="text" id="schedule_section" name="schedule_section" placeholder="ex: BSIT 2A">
                         
                         <button>Add Schedule</button>
                     </form>
@@ -80,7 +72,7 @@
             </div>
                 
                 <div class="schedules_grid">
-                    <div onclick="window.location.href='teacher_homepage_schedule.html'" class="schedule_container">
+                    <div onclick="window.location.href='teacher_schedule_section.html'" class="schedule_container">
                     <h4>IT Elective Lab</h4>
                     <div class="details">
                         <p>BSIT 2A</p>

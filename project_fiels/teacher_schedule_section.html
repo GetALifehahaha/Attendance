@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance System</title>
-    <link rel="stylesheet" href="teacher_homepage.css">
-    <script defer src="teacher_homepage.js"></script>
+    <link rel="stylesheet" href="teacher_page.css">
+    <script defer src="teacher_schedule_section.js"></script>
 </head>
 
 <body>
@@ -21,39 +21,110 @@
     <div class="main">
         <aside class="sidebar">
             <ul class="options">
-                <!-- <li>
+                <li>
                     Dashboard
-                </li> -->
+                </li>
                 <li>
                     Schedules
                 </li>
                 <li>
-                    <!-- <button class="subject-button" onclick="toggleSections('it')">IT - Elective</button>
-                    <ul class="sub-options" id="it-sections" style="display: none;">
-                        <li><button onclick="showSection('it_a')">Section A</button></li>
-                        <li><button onclick="showSection('it_b')">Section B</button></li>
-                        <li><button onclick="showSection('it_c')">Section C</button></li>
-                    </ul>
-                </li>
-                <li>
-                    <button class="subject-button" onclick="toggleSections('db')">Advanced Database</button>
-                    <ul class="sub-options" id="db-sections" style="display: none;">
-                        <li><button onclick="showSection('db_a')">Section A</button></li>
-                        <li><button onclick="showSection('db_b')">Section B</button></li>
-                        <li><button onclick="showSection('db_c')">Section C</button></li>
-                    </ul> -->
+                    Account
                 </li>
             </ul>
         </aside>
 
         <main>
             <div class="breadcrumbs">
-                <h2 onclick="window.location.href='teacher_homepage.html'">Schedule</h2>
+                <h2 onclick="window.location.href='teacher_schedule.html'">Schedule</h2>
                 <h2>></h2>
                 <h2>IT Elective LAB</h2>
             </div>
-            <button>Add Students</button>
+
+            <button id="open_form">Add Students</button>
             <button>Set Attendance</button>
+
+            <div class="full_screen_container">
+                <div class="container add_students">
+                    <div class="pending_class_list">
+                        <table id="student_table">
+                            <tr>
+                                <th>Student ID</th>
+                                <th>Student Name</th>
+                                <th>Status</th>
+                            </tr>
+                            <tr>
+                                <td>202300049</td>
+                                <td>Sencio, Ahlan-nour J.</td>
+                                <td>Present</td>
+                            </tr>
+                            <tr>
+                                <td>202300049</td>
+                                <td>Sencio, Ahlan-nour J.</td>
+                                <td>Present</td>
+                            </tr>
+                            <tr>
+                                <td>202300049</td>
+                                <td>Sencio, Ahlan-nour J.</td>
+                                <td>Present</td>
+                            </tr>
+                            <tr>
+                                <td>202300049</td>
+                                <td>Sencio, Ahlan-nour J.</td>
+                                <td>Present</td>
+                            </tr>
+                            <tr>
+                                <td>202300049</td>
+                                <td>Sencio, Ahlan-nour J.</td>
+                                <td>Present</td>
+                            </tr>
+                            <tr>
+                                <td>202300049</td>
+                                <td>Sencio, Ahlan-nour J.</td>
+                                <td>Present</td>
+                            </tr>
+                            <tr>
+                                <td>202300049</td>
+                                <td>Sencio, Ahlan-nour J.</td>
+                                <td>Present</td>
+                            </tr>
+                            <tr>
+                                <td>202300049</td>
+                                <td>Sencio, Ahlan-nour J.</td>
+                                <td>Present</td>
+                            </tr>
+                            <tr>
+                                <td>202300049</td>
+                                <td>Sencio, Ahlan-nour J.</td>
+                                <td>Present</td>
+                            </tr>
+                            <tr>
+                                <td>202300049</td>
+                                <td>Sencio, Ahlan-nour J.</td>
+                                <td>Present</td>
+                            </tr>
+                            <tr>
+                                <td>202300049</td>
+                                <td>Sencio, Ahlan-nour J.</td>
+                                <td>Present</td>
+                            </tr>
+                            <tr>
+                                <td>202300049</td>
+                                <td>Sencio, Ahlan-nour J.</td>
+                                <td>Present</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="options">
+                        <span id="close_form">
+                            <h3>EXIT</h3>
+                            <h3>X</h3>
+                        </span>
+                        <button id="import_file">Import File</button>
+                        <button>Edit</button>
+                        <button id="confirm">Confirm</button>
+                    </div>
+                </div>
+            </div>
             <div class="grid student_list">
                 <div class="container student_list">
                     <table id="student_table">
