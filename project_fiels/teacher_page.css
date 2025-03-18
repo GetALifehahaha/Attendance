@@ -376,6 +376,82 @@ button{
     }
 }
 
+.grid.dashboard{
+    grid-template-columns: 4fr 6fr;
+    gap: 40px;
+}
+.student_status{
+    gap: 20px;
+    grid-template-columns: auto auto;
+}
+.dashboard_card{
+    padding: 1rem;
+
+    h5{
+        margin-bottom: -10px;
+        filter: opacity(50%);
+    }
+    h3{
+        font-size: 2rem;
+    }
+}
+.weekly_calendar{
+    border-radius: 10px;
+    background-color: var(--clr-main);
+    padding: 10px;
+    .direction{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        *{
+            padding: 0 1rem;
+        }
+        p{
+            font-weight: bold;
+        }
+    }
+    table{
+        margin-top: 30px;
+        border-collapse: collapse;
+        width: 100%;
+
+        td, th{
+            padding: .5rem;
+            text-align: center;
+        }
+        th{
+            font-size: .75rem;
+        }
+        td{
+            padding: 2rem 0;
+            font-size: 1.5rem
+        }
+
+        #current{
+            position: relative;
+            background-color: var(--clr-accent);
+            color: var(--clr-main);
+            border-radius: 20px;
+        }
+        #current::before{
+            content: '';
+            position: absolute;
+            width: 30%; height: 10%;
+            background-color: var(--clr-main);
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 0 0 20px 20px;
+        }
+    }
+}
+
+.card1{
+    background-color: var(--clr-accent);
+    color: var(--clr-main);
+}
+
 .add_schedule.show{
     left: 50%;
 }

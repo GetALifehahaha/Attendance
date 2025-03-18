@@ -17,7 +17,7 @@ Features
 13. Import ✓
 14. Edit
 15. Set Attendance
-16. Profile
+16. Profile ✔
 17. Sign Out
 
 18. PHP (IT DOES NOT WORK!!!!!)
