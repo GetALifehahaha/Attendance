@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance System</title>
+    <link rel="stylesheet" href="teacher_page.css">
+    <script defer src="teacher_schedule.js"></script>
+</head>
+
+<body>
+    <nav id="navbar">
+        <h3>Attendance System</h3>
+        <div>
+            <span class="professor-name">Professor</span>
+            <a href="#" id="signOut">SIGN OUT</a>
+        </div>
+    </nav>
+
+    <div class="main">
+        <aside class="sidebar">
+            <ul class="options">
+                <li>
+                    <a href="teacher_dashboard.html">Dashboard</a>
+                </li>
+                <li>
+                    <span>
+                        <a href="teacher_schedule.html">Schedules</a>
+                    </span>
+                </li>
+                <li>
+                    <a href="teacher_account.html">Account</a>
+                </li>
+            </ul>
+        </aside>
+
+        <main>
+            <div class="breadcrumbs">
+                <h2>Dashboard</h2>
+            </div>
+
+            <div class="grid dashboard">
+                <div class="grid student_status">
+                    <div class="container dashboard_card card1">
+                        <h5>Student Count</h5>
+                        <h3>200</h3>
+                    </div>
+                    <div class="container dashboard_card card2">
+                        <h5>Schedules Created</h5>
+                        <h3>20</h3>
+                    </div>
+                </div>
+
+                <div class="weekly_calendar">
+                    <div class="direction">
+                        <p><</p>
+                        Weekly Calendar
+                        <p>></p>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>17</td>
+                            <td id="current">18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- <div class="container"></div> -->
+
+            
+        </main>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
