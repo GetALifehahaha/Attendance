@@ -44,30 +44,33 @@
             </div>
         </div>
 
-        <div class="full_screen_container">
-            <div class="add_subject">
+        <div class="container">
+            <div class="head">
                 <h3>Schedule: Today</h3>
 
-                <button>Add Schedule</button>
-
-                <div class="form_background">
-                    <form action="#">
-                        <div class="header">
-                            <h3>Add Subject</h3>
-                            <span id="close_form">
-                                <h3>EXIT</h3>
-                                <h3>X</h3>
-                            </span>
+                <button type="button" id="add_subject">Add Subject</button>
+                
+                <div class="full_screen_container">
+                    <div class="add_subject">        
+                        <div class="form_background">
+                            <form action="#">
+                                <div class="header">
+                                    <h3>Add Subject</h3>
+                                    <span id="close_form">
+                                        <h3>EXIT</h3>
+                                        <h3>X</h3>
+                                    </span>
+                                </div>
+        
+            
+                                <label for="subjectCode">Subject Code</label>
+                                <input type="text" id="subjectCode" name="subjectCode" placeholder="Input a subject code" required>
+                                <button type="button" id="submit" onclick="addSubject()">SUBMIT</button>
+                            </form>
                         </div>
-
-    
-                        <label for="subjectCode">Subject Code</label>
-                        <input type="text" id="subjectCode" name="subjectCode" placeholder="Input a subject code" required>
-                        <button type="button">SUBMIT</button>
-                    </form>
+                    </div>
                 </div>
             </div>
-        </div>
             <div class="schedule_today">
                 <table>
                     <tr>

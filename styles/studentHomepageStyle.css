@@ -10,6 +10,7 @@
     margin: 0; border: 0;
     font-family: "Montserrat", sans-serif;
 }
+body
 #navbar{
     display:flex;
     justify-content: space-between;
@@ -53,7 +54,7 @@ main{
             outline-offset: 5px;
             border-radius: 5px
         }
-        div{
+        > div{
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -184,4 +185,36 @@ button:hover{
             gap: 20px;
         }
     }
+}
+#close_form{
+    cursor: pointer;
+    transition: .2s cubic-bezier(.33, .04, 0, 1);
+    background-color: var(--clr-accent);
+    padding: .4rem 0;
+    width: 1.8rem;
+    text-align: center;
+    border-radius: 25px;
+    color: var(--clr-white);
+    overflow: hidden;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    
+    h3{
+        padding: 0 10px;
+        font-size: .75rem;
+    }
+}
+#close_form:hover{
+    width: 6rem;
+    transform: translateX(-5%);
+}
+.add_subject.show{
+    left: 50%;
+}
+.full_screen_container.show{
+    left: 0; 
+    filter: opacity(1);
 }
