@@ -447,6 +447,79 @@ button{
     }
 }
 
+
+.topAbsents{
+    border-radius: 10px;
+    background-color: var(--clr-main);
+    padding: 10px;
+    .direction{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p{
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+    table{
+        margin-top: 30px;
+        border-collapse: collapse;
+        width: 100%;
+
+        td, th{
+            padding: .5rem;
+            text-align: center;
+        }
+        tr{
+            font-size: .75rem;
+        }
+        td{
+            padding: 10px;
+            font-size: 1rem;
+        }
+
+    }
+}
+
+.profSchedule{
+    border-radius: 10px;
+    background-color: var(--clr-main);
+    padding: 10px;
+    text-align: center;
+    .direction{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p{
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+    table{
+        margin-top: 30px;
+        border-collapse: collapse;
+        width: 100%;
+
+        td, th{
+            padding: .5rem;
+            text-align: center;
+        }
+        tr{
+            font-size: .75rem;
+        }
+        td{
+            padding: 10px;
+            font-size: 1rem;
+        }
+
+    }
+}
+
+
+
+
 .card1{
     background-color: var(--clr-accent);
     color: var(--clr-main);
