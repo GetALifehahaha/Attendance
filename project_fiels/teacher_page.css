@@ -535,3 +535,19 @@ button{
 button:hover{
     transform: translateX(5%);
 }
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+.navigation-buttons {
+    margin-top: 20px;
+}
+
+.navigation-buttons button {
+    margin-right: 10px;
+}
