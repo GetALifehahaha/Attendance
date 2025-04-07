@@ -74,9 +74,13 @@ main{
                         border-bottom: 2px solid var(--clr-outline);  
                     }
                 }
-            }
-
-            
+            }   
+        }
+        .head{
+            background-color: transparent;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
         }
         .schedule_week{
             display: block;
@@ -107,5 +111,77 @@ main{
     }
     .container:last-child{
         width: max(50vw, 400px);
+    }
+
+    
+}
+
+button{
+    margin-left: 5px;
+    padding: .5rem;
+    background-color: var(--clr-accent);
+    color: var(--clr-main);
+    width: 150px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);    
+}
+button:hover{
+    transform: translateX(5%);
+}
+
+.full_screen_container{
+    width: 100vw; height: 100vh;
+    position: fixed; top: 0; left: -100%;
+    filter: opacity(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: .2s ease-in-out;
+    z-index: 1;
+}
+.add_subject{
+    width: 40%;
+    height: 80%;
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: var(--clr-main);
+    transition: .2s ease-in;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center ;
+    }
+    form{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid var(--clr-outline);
+        padding: 1rem;
+        gap: 10px;
+        border-radius: 20px;
+
+        label{
+            font-weight: 500;
+            font-size: 1rem;
+        }
+        input{
+            height: 1.5rem;
+            font-size: 1rem;
+            padding: 5px;
+            background-color: transparent;
+            border-bottom: 1px solid var(--clr-text);
+            margin-bottom: 1rem;
+        }
+        .grid{
+            margin-top: 0;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
     }
 }

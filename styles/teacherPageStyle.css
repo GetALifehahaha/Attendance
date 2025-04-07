@@ -63,7 +63,6 @@ button{
     font-size: 1rem;
     cursor: pointer;
     transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);    
-
 }
 
 /* .sub-options button {

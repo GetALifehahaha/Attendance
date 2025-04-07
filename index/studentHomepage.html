@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
     include("config.php");
     include("dbconnect.php");
 
@@ -7,7 +7,7 @@
     } else {
         header('LOCATION: login.php');
     }
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,16 +15,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Homepage</title>
-    <link rel="stylesheet" href="student_homepage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="/styles/studentHomepageStyle.css">
+    <script src="/javascript/studentPage.js" defer></script>
 </head>
 <body>
     <nav id="navbar">
         <h3>Attendance System</h3>
-        <a href="">LOG OUT</a>
+        <a href="studentLogin.html">LOG OUT</a>
     </nav>
     <main>
         
@@ -44,8 +44,30 @@
             </div>
         </div>
 
-        <div class="container">
-            <h3>Schedule: Today</h3>
+        <div class="full_screen_container">
+            <div class="add_subject">
+                <h3>Schedule: Today</h3>
+
+                <button>Add Schedule</button>
+
+                <div class="form_background">
+                    <form action="#">
+                        <div class="header">
+                            <h3>Add Subject</h3>
+                            <span id="close_form">
+                                <h3>EXIT</h3>
+                                <h3>X</h3>
+                            </span>
+                        </div>
+
+    
+                        <label for="subjectCode">Subject Code</label>
+                        <input type="text" id="subjectCode" name="subjectCode" placeholder="Input a subject code" required>
+                        <button type="button">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
             <div class="schedule_today">
                 <table>
                     <tr>
