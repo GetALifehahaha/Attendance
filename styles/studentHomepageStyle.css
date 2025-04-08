@@ -5,6 +5,10 @@
     --clr-outline: #dedede;
     --clr-accent: #2e8bc0;
     --clr-text: #0c2d48;
+    --clr-error-bg: rgb(240, 131, 131);
+    --clr-error-text: rgb(158, 18, 18);
+    --clr-success-bg: rgb(122, 230, 122);
+    --clr-success-text: rgb(6, 117, 62);
 }
 *{
     margin: 0; border: 0;
@@ -98,6 +102,9 @@ main{
                         margin-top: 10px;
                         margin-bottom: 5px;
                     }
+                    p{
+                        margin-bottom: 20px;
+                    }
                 }
             }
         }
@@ -146,7 +153,7 @@ button:hover{
 }
 .add_subject{
     width: 40%;
-    height: 80%;
+    height: 40%;
     padding: 2rem;
     border-radius: 20px;
     background-color: var(--clr-main);
@@ -217,4 +224,27 @@ button:hover{
 .full_screen_container.show{
     left: 0; 
     filter: opacity(1);
+}
+.error{
+    background-color: var(--clr-error-bg);
+    color: var(--clr-error-text);
+    padding: .5rem;
+    margin: 10px 0;
+    border-radius: 12px;
+}
+.success{
+    background-color: var(--clr-success-bg);
+    color: var(--clr-success-text);
+    padding: .5rem;
+    margin: 10px 0;
+    border-radius: 12px;
+}
+
+@media (max-width: 600px) {
+    .add_subject{
+        width: 60%;
+    }
+    #close_form:hover{
+        width: 1.8rem;
+    }
 }
