@@ -65,7 +65,7 @@ function addSubject(){
             subject_time.textContent = subjects[i].subject_time;
             table_column.append(subject_name, subject_time)
 
-            if(subjects[i].subject_day == "tue"){
+            if(subjects[i].subject_day == today){
                 showScheduleToday(subjects[i]);
             }
 
@@ -75,9 +75,13 @@ function addSubject(){
         }
     };
 
-        error_message.textContent = "Subject not found! Please enter a correct subject code.";
-        add_subject.append(error_message)
+    error_message.textContent = "Subject not found! Please enter a correct subject code.";
+    add_subject.append(error_message)
 }
+
+let days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+let date = new Date();
+let today = days[date.getDay()]
 
 function showScheduleToday(subject){
     let schedule = document.querySelector(".schedule_today");
