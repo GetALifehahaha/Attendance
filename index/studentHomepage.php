@@ -1,4 +1,4 @@
-<!-- <?php
+/*
     include("config.php");
     include("dbconnect.php");
 
@@ -7,7 +7,7 @@
     } else {
         header('LOCATION: login.php');
     }
-?> -->
+?>*/
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/studentHomepageStyle.css">
-    <script src="/javascript/studentPage.js" defer></script>
+    <link rel="stylesheet" href="../styles/studentHomepageStyle.css">
+    <script src="../javascript/studentPage.js" defer></script>
 </head>
 <body>
     <nav id="navbar">
@@ -28,7 +28,7 @@
         
         <div class="right">
             <i class="fa-regular fa-bell"></i>
-            <a href="studentLogin.html">LOG OUT</a>
+            <a href="studentLogin.php">LOG OUT</a>
         </div>
     </nav>
     <main>

@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>AttendED - Sign Up</title>
-        <link rel="stylesheet" href="/styles/teacherLogInStyles.css">
+        <link rel="stylesheet" href="../styles/teacherLogInStyles.css">
     </head>
     <body>
 
@@ -16,7 +16,7 @@
             </div>
 
             <div class="right-section">
-                <a href="Option.html"><img src="/assets/Goback.png" alt=""></a>
+                <a href="Option.php"><img src="../assets/Goback.png" alt=""></a>
                 <div class="signup-box">
 
 
@@ -26,7 +26,7 @@
                     <form id="signupForm">
                         <input type="text" id="email" placeholder="EMAIL" required>
                         <input type="password" id="password" placeholder="PASSWORD" required>
-                        <p> Don't have an account? <a href="teacherSignup.html">Sign Up</a> instead!</p>
+                        <p> Don't have an account? <a href="teacherSignup.php">Sign Up</a> instead!</p>
                         <button type="button"><a href="teacherDashboard.html">Log In</a></button>
 
                     </form>

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance System</title>
-    <link rel="stylesheet" href="/styles/teacherPageStyle.css">
-    <script defer src="/javascript/teacherPage.js"></script>
+    <link rel="stylesheet" href="../styles/teacherPageStyle.css">
+    <script defer src="../javascript/teacherPage.js"></script>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <h3>Attendance System</h3>
         <div>
             <span class="professor-name">Professor</span>
-            <a href="teacherLogIn.html" id="signOut">SIGN OUT</a>
+            <a href="teacherLogIn.php" id="signOut">SIGN OUT</a>
         </div>
     </nav>
 
@@ -22,17 +22,17 @@
         <aside class="sidebar">
             <ul class="options">
                 <li>
-                    <a href="teacherDashboard.html">Dashboard</a>
+                    <a href="teacherDashboard.php">Dashboard</a>
 
                 </li>
                 <li>
                     <span>
-                        <a href="teacherSchedule.html">Schedules</a>
+                        <a href="teacherSchedule.php">Schedules</a>
                     </span>
                 </li>
                 <li>
                     <span>
-                        <a href="teacherAccount.html">Account</a>
+                        <a href="teacherAccount.php">Account</a>
                     </span>
                 </li>
             </ul>
