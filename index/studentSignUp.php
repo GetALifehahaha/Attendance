@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>AttendED - Sign Up</title>
-        <link rel="stylesheet" href="/styles/StudentSignupStyles.css">
+        <link rel="stylesheet" href="../styles/StudentSignupStyles.css">
     </head>
     <body>
 
@@ -28,8 +28,8 @@
                         <input type="text" id="school-id" placeholder="SCHOOL ID" required>
                         <input type="password" id="password" placeholder="PASSWORD" required>
                         <input type="password" id="confirm-password" placeholder="CONFIRM PASSWORD" required>
-                        <p> Do you have an account already? <a href="/assets/studentLogin.html">Log in</a> instead!</p>
-                        <button type="button"> Sign Up </button>
+                        <p> Do you have an account already? <a href="../index/studentLogin.php">Log in</a> instead!</p>
+                        <button type="button" id="submit-Btn"> Sign Up </button>
 
                     </form>
                 </div>
