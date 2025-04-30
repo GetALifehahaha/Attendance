@@ -13,11 +13,6 @@ body {
     min-height: 100vh;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
 .option-container {
     width: 100%;
     max-width: 800px;
@@ -59,6 +54,24 @@ a {
     gap: 20px;
 }
 
+a {
+    display: block;
+    text-decoration: none;
+    color: #4e5d73;
+    background-color: #516181;
+    border-radius: 20px;
+    padding: 10px 30px;
+    font-size: 16px;
+    text-align: center;
+    width: 140px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.option a:hover {
+    background-color: #3f4b64;
+}
+
 .icon-container {
     width: 140px;
     height: 140px;
@@ -74,21 +87,4 @@ a {
     width: 80px;
     height: 80px;
     object-fit: cover;
-}
-
-.button {
-    background-color: #516181;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 30px;
-    font-size: 16px;
-    cursor: pointer;
-    text-align: center;
-    width: 140px;
-    font-weight: 500;
-}
-
-.button:hover {
-    background-color: #3f4b64;
 }

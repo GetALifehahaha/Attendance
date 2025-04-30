@@ -1,4 +1,4 @@
-/*
+<?php
 // Include the Database class
 include_once '../API/database.php';
 
@@ -25,17 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Hash the password for storage
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    // Prepare the SQL query based on role
-    if ($role === 'student') {
-        $sql = "INSERT INTO students (school_id, course, first_name, last_name, password)
-                VALUES (:schoolId, :course, :firstName, :lastName, :password)";
-    } elseif ($role === 'teacher') {
-        $sql = "INSERT INTO teachers (email,  first_name, middle_name last_name, password)
-                VALUES (:email, :firstName, :middleName, :lastName, :password)";
-    } else {
-        echo "Invalid role selected.";
-        exit;
-    }
+    // Prepare the SQL query for teachers
+    $sql = "INSERT INTO teachers (email, firstName, middleName, lastName, password)
+            VALUES (:email, :firstName, :middleName, :lastName, :password)";
 
     // Prepare the statement
     $stmt = $conn->prepare($sql);
@@ -49,9 +41,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Execute the query and check if it was successful
     if ($stmt->execute()) {
-        echo "Account created successfully!";
+        echo "Teacher account created successfully!";
+        header("Location: ../index/teacherLogin.php");
+        exit;
     } else {
-        echo "Error: Could not insert the record.";
+        $errorInfo = $stmt->errorInfo();
+        echo "Error: Could not insert teacher record. Details: " . $errorInfo[2];
     }
 }
 ?>

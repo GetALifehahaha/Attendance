@@ -7,8 +7,7 @@
         <link rel="stylesheet" href="../styles/teacherLogInStyles.css">
     </head>
     <body>
-
-        <div class="container">
+    <div class="container">
             <div class="left-section">
 
                 <h1><span class="bold"> Attend</span><span class="ED">ED </span></h1>
@@ -18,21 +17,18 @@
             <div class="right-section">
                 <a href="Option.php"><img src="../assets/Goback.png" alt=""></a>
                 <div class="signup-box">
-
-
                     <h2> Log In </h2>
                     <p class="welcome"> Welcome! Please provide the information below in order to log in. </p>
                     
-                    <form id="signupForm">
-                        <input type="text" id="email" placeholder="EMAIL" required>
-                        <input type="password" id="password" placeholder="PASSWORD" required>
+                    <form id="teacherLogInForm" action="../Form/TeacherloginForm.php" method="POST">
+                        <input type="text" id="email" name="email" placeholder="EMAIL" required>
+                        <input type="password" id="password" name="password" placeholder="PASSWORD" required>
                         <p> Don't have an account? <a href="teacherSignup.php">Sign Up</a> instead!</p>
-                        <button type="button"><a href="teacherDashboard.html">Log In</a></button>
-
+                        <button type="submit">Log In</button>
                     </form>
+
                 </div>
             </div>
-
         </div>
     </body>
 </html>

@@ -21,14 +21,14 @@
                     <h2> Sign Up </h2>
                     <p class="welcome"> Welcome! Please provide the information below in order to create an account for use, thank you. </p>
                     
-                    <form action="../Form/signupForm.php" method="POST" id="signupForm">
+                    <form id="signupForm" action="../Form/TeachersignupForm.php" method="POST">
                         <input type="text" id="first-name" name="firstName" placeholder="FIRST NAME" required>
                         <input type="text" id="middle-name" name="middleName" placeholder="MIDDLE NAME" required>
                         <input type="text" id="last-name" name="lastName" placeholder="LAST NAME" required>
                         <input type="text" id="Email" name="email" placeholder="EMAIL" required>
                         <input type="password" id="password" name="password" placeholder="PASSWORD" required>
                         <input type="password" id="confirm-password" name="confirmPassword" placeholder="CONFIRM PASSWORD" required>
-                        <p> Do you have an account already? <a href="teacherLogIn.php">Log in</a> instead!</p>
+                        <p> Do you have an account already? <a href="teacherLogin.php">Log in</a> instead!</p>
                         <button type="submit"> Sign Up </button>
 
                     </form>

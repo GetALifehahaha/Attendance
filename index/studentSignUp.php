@@ -21,15 +21,15 @@
                     <h2> Sign Up </h2>
                     <p class="welcome"> Welcome! Please provide the information below in order to create an account for use, thank you. </p>
                     
-                    <form id="signupForm">
-                        <input type="text" id="first-name" placeholder="FIRST NAME" required>
-                        <input type="text" id="middle-name" placeholder="MIDDLE NAME" required>
-                        <input type="text" id="last-name" placeholder="LAST NAME" required>
-                        <input type="text" id="school-id" placeholder="SCHOOL ID" required>
-                        <input type="password" id="password" placeholder="PASSWORD" required>
-                        <input type="password" id="confirm-password" placeholder="CONFIRM PASSWORD" required>
+                    <form id="signupForm" action="../Form/StudentsignupForm.php" method="POST">
+                    <input type="text" id="first-name" name="firstName" placeholder="FIRST NAME" required>
+                    <input type="text" id="middle-name" name="middleName" placeholder="MIDDLE NAME">
+                    <input type="text" id="last-name" name="lastName" placeholder="LAST NAME" required>
+                    <input type="text" id="school-id" name="schoolId" placeholder="SCHOOL ID" required>
+                    <input type="password" id="password" name="password" placeholder="PASSWORD" required>
+                    <input type="password" id="confirm-password" name="confirmPassword" placeholder="CONFIRM PASSWORD" required>
                         <p> Do you have an account already? <a href="../index/studentLogin.php">Log in</a> instead!</p>
-                        <button type="button" id="submit-Btn"> Sign Up </button>
+                        <button type="submit"> Sign Up </button>
 
                     </form>
                 </div>
