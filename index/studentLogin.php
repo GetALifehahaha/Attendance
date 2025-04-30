@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AttendED - Sign Up</title>
-        <link rel="stylesheet" href="/styles/studentLoginStyle.css">
+        <title>AttendED - Log In</title>
+        <link rel="stylesheet" href="../styles/studentLoginStyle.css">
     </head>
     <body>
 
@@ -16,18 +16,18 @@
             </div>
 
             <div class="right-section">
-                <a href="Option.html"><img src="/assets/Goback.png" alt=""></a>
+                <a href="Option.php"><img src="../assets/Goback.png" alt=""></a>
                 <div class="signup-box">
 
                     <h2> Log In </h2>
                     <p class="welcome"> Welcome! Please provide the information below in order to log in. </p>
                     
-                    <form id="signupForm">
-                        <input type="text" id="school-id" placeholder="SCHOOL ID" required>
-                        <input type="password" id="password" placeholder="PASSWORD" required>
-                        <p> Don't have an account? <a href="StudentSignUp.html">Sign Up</a> instead!</p>
+                    <form id="studentLogInForm" action="../Form/StudentloginForm.php" method="POST">
+                        <input type="text" id="schoolId" name="schoolId" placeholder="SCHOOL ID" required>
+                        <input type="password" id="password" name="password" placeholder="PASSWORD" required>
+                        <p> Don't have an account? <a href="studentSignUp.php">Sign Up</a> instead!</p>
+                        <button type="submit">Log In</button>
                     </form>
-                    <button type="button"><a href="studentHomepage.html">Log In</a></button>
                 </div>
             </div>
 
