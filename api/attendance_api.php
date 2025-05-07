@@ -60,7 +60,7 @@
                 exit;
             }
 
-            if (isset($data['student_ID'])){
+            if (isset($data['student_ID']) && isset($data['schedule_ID'])){
                 $result = $attendance->setPresent($data['student_ID'], $data['schedule_ID']);
                 
                 if ($result) {
@@ -68,6 +68,8 @@
                 } else {
                     echo json_encode(["status" => "error", "message" => "Failed to set attendance"]);
                 }
+
+                break;
             }
 
             if (isset($data['schedule_ID'])){
@@ -78,9 +80,10 @@
                 } else {
                     echo json_encode(["status" => "error", "message" => "Failed to end attendance"]);
                 }
+
+                break;
             }
 
 
-            break;
     }
 ?>
