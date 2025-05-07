@@ -18,7 +18,7 @@
         }
 
         public function getScheduleByID($schedule_ID){
-            $query = 'SELECT schedule_ID, schedule_name, schedule_start_time, schedule_end_time, schedule_day_of_the_week, schedule_room, schedule_capacity FROM '.$this->table.' WHERE schedule_ID = ?';
+            $query = 'SELECT schedule_ID, schedule_name, schedule_department, schedule_year, schedule_section, schedule_start_time, schedule_end_time, schedule_day_of_the_week, schedule_room, schedule_capacity FROM '.$this->table.' WHERE schedule_ID = ?';
             $stmt = $this->conn->prepare($query);
             $stmt->execute([$schedule_ID]);
 
@@ -38,6 +38,19 @@
             $stmt = $this->conn->prepare($query);
             return $stmt->execute([$schedule_ID, $schedule_name, $schedule_department, $schedule_year, $schedule_section, $schedule_start_time, $schedule_end_time, $schedule_day_of_the_week, $schedule_room, $schedule_capacity]);
 
+        }
+
+        public function editSchedule($schedule_ID, $schedule_name, $schedule_department, $schedule_year, $schedule_section, $schedule_start_time, $schedule_end_time, $schedule_day_of_the_week, $schedule_room, $schedule_capacity){
+            $query = 'UPDATE '.$this->table. ' SET schedule_name = ?, schedule_department = ?, schedule_year = ?, schedule_section = ?, schedule_start_time = ?, schedule_end_time = ?, schedule_day_of_the_week = ?, schedule_room = ?, schedule_capacity = ? 
+                        WHERE schedule_ID = ?';
+            $stmt = $this->conn->prepare($query);
+            return $stmt->execute([$schedule_name, $schedule_department, $schedule_year, $schedule_section, $schedule_start_time, $schedule_end_time, $schedule_day_of_the_week, $schedule_room, $schedule_capacity, $schedule_ID]);
+        }
+
+        public function deleteSchedule($schedule_ID){
+            $query = 'DELETE FROM '.$this->table. ' WHERE schedule_ID = ?';
+            $stmt = $this->conn->prepare($query);
+            return $stmt->execute([$schedule_ID]);
         }
     }
 ?>

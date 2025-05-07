@@ -28,14 +28,14 @@
         
         <div class="right">
             <h4 onclick="showNotification()">
-                <i class="fa-regular fa-bell"></i>0
+                <i class="fa-regular fa-bell"></i>
             </h4>
-            <a href="studentLogin.html">LOG OUT</a>
+            <a href="studentLogin.php">LOG OUT</a>
         </div>
     </nav>
 
     <div class="notification_box">
-        <h4 class="notification">You have been absent in IT Elective for 5 days</h4>
+        <h4 class="notification"></h4>
     </div>
     <main>
         

@@ -60,5 +60,39 @@
             }
 
             break;
+
+        case 'PUT':
+            $data = json_decode(file_get_contents("php://input"), true);
+
+            if (!$data){
+                echo json_encode(["status" => "error", "message" => "Invalid JSON Input"]);
+                exit;
+            }
+
+            $result = $schedule->editSchedule($data['schedule_ID'], $data['schedule_name'], $data['schedule_department'], $data['schedule_year'], $data['schedule_section'], $data['schedule_start_time'], $data['schedule_end_time'], $data['schedule_day_of_the_week'], $data['schedule_room'], $data['schedule_capacity']);
+
+            if ($result){
+                echo json_encode(["status" => "success", "message" => "Updated schedule successfully"]);
+            } else {
+                echo json_encode(["status" => "error", "message" => "Failed to update schedule"]);
+            }
+
+            break;
+        case 'DELETE':
+            $data = json_decode(file_get_contents("php://input"), true);
+
+            if (!$data){
+                echo json_encode(["status" => "error", "message" => "Invalid JSON Input"]);
+                exit;
+            }
+            $result = $schedule->deleteSchedule($data['schedule_ID']);
+
+            if ($result){
+                echo json_encode(["status" => "success", "message" => "Deleted schedule successfully"]);
+            } else {
+                echo json_encode(["status" => "error", "message" => "Failed to delete schedule"]);
+            }
+            break;
+
     }
 ?>

@@ -7,6 +7,10 @@
     <title>Attendance System</title>
     <link rel="stylesheet" href="/styles/teacherPageStyle.css">
     <script defer src="/javascript/teacherPage.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,7 +18,7 @@
         <h3>Attendance System</h3>
         <div>
             <span class="professor-name">Professor</span>
-            <a href="teacherLogIn.html" id="signOut">SIGN OUT</a>
+            <a href="teacherLogIn.php" id="signOut">SIGN OUT</a>
 
         </div>
     </nav>
@@ -23,17 +27,12 @@
         <aside class="sidebar">
             <ul class="options">
                 <li>
-                    <a href="teacherDashboard.html">Dashboard</a>
+                    <a href="teacherDashboard.php">Dashboard</a>
 
                 </li>
                 <li>
                     <span>
-                        <a href="teacherSchedule.html">Schedules</a>
-                    </span>
-                </li>
-                <li>
-                    <span>
-                        <a href="teacherAccount.html">Account</a>
+                        <a href="teacherSchedule.php">Schedules</a>
                     </span>
                 </li>
             </ul>
