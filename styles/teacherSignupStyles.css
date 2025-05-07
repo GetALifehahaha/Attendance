@@ -6,6 +6,7 @@
 }
 
 body {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,4 +102,5 @@ button {
 button:hover {
     background-color: #162a40;
 }
+
 
