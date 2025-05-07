@@ -184,7 +184,6 @@ function setAttendance(){
         method: 'POST',
         body: JSON.stringify({
             schedule_ID: scheduleID,
-            status: "start"
         }),
         headers: {'Control-Type': 'application/json'}
     })
@@ -229,8 +228,9 @@ function setPresent(student_ID){
         }),
         headers: {'Control-Type': 'application/json'}
     })
-    .then(response => response.json())
+    .then(response => response.text())
     .then(resp => {
+        console.log(resp)
         feedback(resp.status, resp.message);
     })
 }
@@ -305,44 +305,52 @@ function loadAttendanceHistory(){
             return;
         }
 
+        console.log(resp)
+
+        let currDate;
+        let attendanceBody = document.querySelector(".attendanceBody");
+        attendanceBody.innerHTML = "";
+
         resp.attendanceHistory.forEach(rows => {
-            attendanceBody.innerHTML += `
-                <table id="${rows.attendance_date}">
-                    <h4>Date: ${rows.attendance_date}</h4>
-                    <thead>
-                        <th>Student ID</th>
-                        <th>Student Name</th>
-                        <th>Attendance Status</th>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
+
+            if (currDate != rows.attendance_date){
+                currDate = rows.attendance_date;
+                attendanceBody.innerHTML += `
+                    <table>
+                        <h4>${parseDate(rows.attendance_date)}</h4>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Student Name</th>
+                            <th>Attendance Status</th>
+            </tr>
+                    </table>    
+                `
+            }
+
+            attendanceBody.lastElementChild.innerHTML += `
+                <tr>
+                            <td>${rows.student_ID}</td>
+                            <td>${rows.student_name}</td>
+                            <td>${capitalize(rows.attendance_status)}</td>
+                        </tr>
             `
+
+
+
+            currDate = rows.attendance_date;
+            
+            
         })
 
-        // Only run this once, after all tables are in the DOM
-        // const tableCache = {};
-        // document.querySelectorAll(".attendanceBody table").forEach(table => {
-        //     const date = table.id;
-        //     if (!tableCache[date]) {
-        //         const tbody = table.querySelector("tbody");
-        //         if (tbody) tableCache[date] = tbody;
-        //     }
-        // });
-
-        // // Make sure this block is not inside a loop or duplicate call
-        // resp.attendanceHistory.forEach(row => {
-        //     const tbody = tableCache[row.attendance_date];
-        //     if (tbody) {
-        //         tbody.insertAdjacentHTML('beforeend', `
-        //             <tr>
-        //                 <td>${row.student_ID}</td>
-        //                 <td>${row.student_name}</td>
-        //                 <td>${capitalize(row.attendance_status)}</td>
-        //             </tr>
-        //         `);
-        //     }
-        // });
+        
 
     })
 }
+
+function parseDate(phpDateStr) {
+    const date = new Date(phpDateStr);
+    if (isNaN(date)) return "Invalid date";
+  
+    const options = { month: 'long', day: '2-digit', year: 'numeric' };
+    return date.toLocaleDateString(undefined, options);
+  }

@@ -41,7 +41,7 @@
             // Get the latest attendance entry for this student today
             $checkQ = 'SELECT end_time FROM '.$this->table. ' WHERE end_time IS NOT NULL AND attendance_date = CURDATE() AND student_ID = ? AND schedule_ID = ?';
             $stmt = $this->conn->prepare($checkQ);
-            $stmt->execute([$student_ID]);
+            $stmt->execute([$student_ID, $schedule_ID]);
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             if ($result){
@@ -74,7 +74,7 @@
         }
         
         public function getAttendanceHistory($schedule_ID) {
-            $query = 'SELECT s.student_ID student_ID, CONCAT(s.last_name, ", ", s.first_name , " ", s.middle_name) student_name, a.attendance_status, a.attendance_date FROM '.$this->table.' 
+            $query = 'SELECT DISTINCT s.student_ID student_ID, CONCAT(s.last_name, ", ", s.first_name , " ", s.middle_name) student_name, a.attendance_status, a.attendance_date FROM '.$this->table.' 
             a JOIN students s ON a.student_ID = s.student_ID 
             JOIN schedule_enrolled se ON se.schedule_ID = a.schedule_ID 
             WHERE se.schedule_ID = ?
