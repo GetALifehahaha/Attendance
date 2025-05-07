@@ -223,7 +223,7 @@ button{
     transition: .2s ease-in-out;
     z-index: 1;
 }
-.add_schedule{
+.add_schedule, .edit_schedule{
     width: 40%;
     height: 80%;
     padding: 2rem;
@@ -699,6 +699,69 @@ button:hover{
         }
         input{
             width: 50%;
+        }
+    }
+}
+
+.button_group{
+    display: flex;
+    flex-direction: row;
+
+
+    width: 100%;
+    button:last-child{
+        margin-left: auto;
+        width: 40%;
+    }
+}
+
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(-100%);
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: .2s ease;
+
+    &.show{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+.attendance_history{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--clr-main);
+    height: 80%;
+    width: 80%;
+    border-radius: 20px;
+    padding: 2rem;
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center ;
+
+        margin-bottom: 20px;
+    }
+
+    .attendanceBody{
+        overflow-y: auto;
+    }
+
+    table{
+        padding: .5rem;
+        border-bottom: 1px solid var(--clr-outline);
+        margin-bottom: 10px;
+        width: 100%;
+        th, td{
+            text-align: left;
+            width: calc(100% / 3);
         }
     }
 }

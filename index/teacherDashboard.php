@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance System</title>
     <link rel="stylesheet" href="/styles/teacherPageStyle.css">
-    <script defer src="/javascript/teacherPage.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script defer src="/javascript/teacherDashboard.js"></script>
 </head>
 
 <body>
@@ -14,7 +18,7 @@
         <h3>Attendance System</h3>
         <div>
             <span class="professor-name">Professor</span>
-            <a href="teacherLogIn.html" id="signOut">SIGN OUT</a>
+            <a href="teacherLogIn.php" id="signOut">SIGN OUT</a>
         </div>
     </nav>
 
@@ -22,17 +26,12 @@
         <aside class="sidebar">
             <ul class="options">
                 <li>
-                    <a href="teacherDashboard.html">Dashboard</a>
+                    <a href="teacherDashboard.php">Dashboard</a>
 
                 </li>
                 <li>
                     <span>
-                        <a href="teacherSchedule.html">Schedules</a>
-                    </span>
-                </li>
-                <li>
-                    <span>
-                        <a href="teacherAccount.html">Account</a>
+                        <a href="teacherSchedule.php">Schedules</a>
                     </span>
                 </li>
             </ul>
@@ -47,11 +46,11 @@
                 <div class="grid student_status">
                     <div class="container dashboard_card card1">
                         <h5>Student Count</h5>
-                        <h3>200</h3>
+                        <h3 id="studentCount"></h3>
                     </div>
                     <div class="container dashboard_card card2">
                         <h5>Schedules Created</h5>
-                        <h3>20</h3>
+                        <h3 id="scheduleCount"></h3>
                     </div>
                 </div>
 
@@ -72,13 +71,13 @@
                             <th>Sat</th>
                         </tr>
                         <tr>
-                            <td>16</td>
-                            <td>17</td>
-                            <td id="current">18</td>
-                            <td>19</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td id="current">8</td>
+                            <td>9</td>
                             <td>20</td>
-                            <td>21</td>
-                            <td>22</td>
                         </tr>
                     </table>
                 </div>
@@ -94,34 +93,8 @@
                         <tr>
                             <th>Name</th>
                             <th>Recorded Absences</th>
-                            <th>Remarks</th>
                         </tr>
-                        
-                        <tr>
-                            <td>Jilian</td>
-                            <td>5</td>
-                            <td>Drop</td>
-                        </tr>
-                        <tr>
-                            <td>Fatima</td>
-                            <td>4</td>
-                            <td>Warning</td>
-                        </tr>
-                        <tr>
-                            <td>Taylor</td>
-                            <td>4</td>
-                            <td>Warning</td>
-                        </tr>
-                        <tr>
-                            <td>Jenna</td>
-                            <td>3</td>
-                            <td>Warning</td>
-                        </tr>
-                        <tr>
-                            <td>Zayne</td>
-                            <td>3</td>
-                            <td>Warning</td>
-                        </tr>
+                        <tbody id="absentList"></tbody>
                     </table>
                 </div>
 
@@ -140,26 +113,7 @@
                             <th>Room</th>
                         </tr>
 
-                        <tr>
-                            <td>Computer Programing</td>
-                            <td>1A</td>
-                            <td>8:00 AM-10:00 AM</td>
-                            <td>Lab1</td>
-                        </tr>
-
-                        <tr>
-                            <td>IT Elective</td>
-                            <td>2A</td>
-                            <td>11:00 AM-1:00 PM</td>
-                            <td>LR1</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>IT Elective</td>
-                            <td>2C</td>
-                            <td>2:00 PM-5:00 PM</td>
-                            <td>LR1</td>
-                        </tr>
+                        <tbody id="scheduleList"></tbody>
                     </table>
                 </div>
             </div>
